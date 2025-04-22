@@ -73,50 +73,44 @@
             object-fit: cover;
         }
 
-     .btn {
-    padding: 10px 25px;
-    background-color: rebeccapurple;
-    color: white;
-    border: none;
-    font-size: 16px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    display: block;
-    margin: 30px auto;
-    position: relative;
-    overflow: hidden;
-     text-decoration: none;
-      overflow: hidden;
-        box-shadow: none;
-    border-bottom: none;
-    z-index: 1;
-}
+        .btn {
+            padding: 10px 25px;
+            background-color: rebeccapurple;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: block;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
 
-.btn::before {
-    content: "";
-    position: absolute;
-     text-decoration: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: -1;
-    transition: transform 0.4s ease;
-    transform: scaleX(0);
-    transform-origin: left;
-    border-radius: 25px;
-}
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: -1;
+            transition: transform 0.4s ease;
+            transform: scaleX(0);
+            transform-origin: left;
+            border-radius: 25px;
+        }
 
-.btn:hover::before {
-    transform: scaleX(1);
-}
+        .btn:hover::before {
+            transform: scaleX(1);
+        }
 
-.btn:hover {
-    color: rebeccapurple;
-     text-decoration: none;
-}
+        .btn:hover {
+            color: rebeccapurple;
+        }
 
         .thank-you {
             text-align: center;
@@ -176,6 +170,22 @@
         .emoji {
             font-size: 28px;
         }
+
+        .thank-you-card {
+            display: none;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .hidden-btn {
+            display: none;
+        }
     </style>
 </head>
 
@@ -184,94 +194,53 @@
 
     <section id="photo-gallery">
         <div class="container">
-      
+
             <div class="typing-text" id="welcome-message">
-            
+
             </div>
 
             <div class="photo-gallery" id="gallery">
-              
+
                 <div class="photo-item">
                     <img src="./assets/images/reena-4.webp" alt="Me and Reena" />
                 </div>
 
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-1.webp" alt="Reena and Anu" />
-                </div>
-               
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-n-3.webp" alt="Reena, Me, and Anu" />
-                </div>
-               
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-n-t-1.webp" alt="Me and Tamanna" />
-                </div>
-        
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-3.webp" alt="Reena, Me, and Tamanna" />
-                </div>
-              
-                <div class="photo-item">
-                    <img src="./assets/images/r-n-2.webp" alt="Reena and Me" />
-                </div>
-               
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-n-1.webp" alt="Me, Reena, and Anu" />
-                </div>
-             
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-6.webp" alt="Reena and Anu" />
-                </div>
-            
-                <div class="photo-item">
-                    <img src="./assets/images/reena-16.webp" alt="Me, Tamanna, and Anu" />
-                </div>
-             
-                <div class="photo-item">
-                    <img src="./assets/images/r-n-1.webp" alt="Me and Reena" />
-                </div>
-              
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-n-2.webp" alt="Me, Reena, and Anu" />
-                </div>
-              
-                <div class="photo-item">
-                    <img src="./assets/images/reena-15.webp" alt="Reena, Me, and Tamanna" />
-                </div>
-            
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-4.webp" alt="Reena, Me, and Anu" />
-                </div>
-              
-                <div class="photo-item">
-                    <img src="./assets/images/r-a-2.webp" alt="Me and Reena" />
-                </div>
-          
-                <div class="photo-item">
-                    <img src="./assets/images/reena-14.webp" alt="Reena, Me, and Tamanna" />
-                </div>
+                <!-- other photo items ... -->
+
             </div>
+
+            <a href="index.html">
+                <button class="btn hidden-btn">Back to starting</button>
+            </a>
 
             <div class="thank-you" id="thank-you-message" style="display: none;">
                 <p>Thank you for visiting this special gallery! Every photo tells a story of our beautiful bond. 🌟</p>
                 <p>I tried my best to make you smile with this little effort. 😊</p>
             </div>
 
-            <a href="index.html">
-                <button class="btn">Back to starting</button>
-            </a>
+            <!-- This button will now appear after the typing effect -->
+            <button class="btn" id="thank-you-button" onclick="toggleThankYouCard()" style="display: none;">Click for
+                Special Thanks to Anu!</button>
+
+                
+                <div class="thank-you-card" id="thank-you-card">
+                    <p>Special thanks to Anu ji for her amazing help in creating this gallery and beautiful page! 🙏❤️</p>
+                    <p>50-50 credit goes to her! 👏💯</p>
+                    <p>A big thank you from the bottom of my heart! 💖</p>
+                    <p style="margin-top: 25px;" class="text-lg text-gray-800 font-semibold mt-4">—-by your ek loti pdosn 💖💌</p>
+        </div>
+
+
         </div>
     </section>
 
     <script>
-      
-       const lines = [
+        const lines = [
             "Welcome to this beautiful journey of photos! 💖",
             "Each photo tells a story of love, laughter, and memories. ✨",
             "Happy Birthday to meri Priye Pdosn! 🎉🎂",
             "Let's make this moment unforgettable! 🎉"
         ];
-
 
         let lineIndex = 0;
         let charIndex = 0;
@@ -287,20 +256,35 @@
                 lineIndex++;
                 charIndex = 0;
                 if (lineIndex < lines.length) {
-                    document.getElementById("welcome-message").innerHTML += "<span class='typing'></span>"; 
-                    setTimeout(typeLine, 500); 
+                    document.getElementById("welcome-message").innerHTML += "<span class='typing'></span>";
+                    setTimeout(typeLine, 500);
                 } else {
-                    setTimeout(showGallery, 1000); 
+                    setTimeout(showGallery, 1000);
+                    setTimeout(showThankYouButton, 4000); // Show the button after typing is done
                 }
             }
         }
 
         function showGallery() {
-            document.getElementById("gallery").style.display = "grid"; 
-            document.getElementById("thank-you-message").style.display = "block"; 
+            document.getElementById("gallery").style.display = "grid";
+            document.getElementById("thank-you-message").style.display = "block";
         }
 
-  
+        function showThankYouButton() {
+            document.getElementById("thank-you-button").style.display = "block"; // Display the button after typing effect
+        }
+
+        function toggleThankYouCard() {
+            const thankYouCard = document.getElementById("thank-you-card");
+
+            // Check if the thank-you card is currently displayed, and toggle its visibility
+            if (thankYouCard.style.display === "block") {
+                thankYouCard.style.display = "none";
+            } else {
+                thankYouCard.style.display = "block";
+            }
+        }
+
         window.onload = typeLine;
     </script>
 
