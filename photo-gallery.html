@@ -1,0 +1,281 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reena's Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f2f4ff;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            background-color: rebeccapurple;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 600;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        section {
+            padding: 100px 20px 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            display: none;
+        }
+
+        .photo-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            background-color: rebeccapurple;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .btn:hover {
+            background-color: #155cc2;
+        }
+
+        .thank-you {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 50px;
+        }
+
+        .typing-text {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 30px;
+            color: orangered;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid #333;
+        }
+
+        .typing-text span {
+            display: block;
+            opacity: 0;
+            white-space: normal;
+        }
+
+        .typing-text span.typing {
+            animation: typing 4s steps(40) 1s 1 normal both;
+        }
+
+        @keyframes typing {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .typing-text {
+                font-size: 20px;
+                line-height: 1.6;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .typing-text {
+                font-size: 20px;
+                line-height: 1.5;
+                text-align: left;
+                white-space: normal;
+            }
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">Reena's Photo Gallery 📸</div>
+
+    <section id="photo-gallery">
+        <div class="container">
+      
+            <div class="typing-text" id="welcome-message">
+            
+            </div>
+
+            <div class="photo-gallery" id="gallery">
+              
+                <div class="photo-item">
+                    <img src="./assets/images/reena-4.webp" alt="Me and Reena" />
+                </div>
+
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-1.webp" alt="Reena and Anu" />
+                </div>
+               
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-3.webp" alt="Reena, Me, and Anu" />
+                </div>
+               
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-t-1.webp" alt="Me and Tamanna" />
+                </div>
+        
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-3.webp" alt="Reena, Me, and Tamanna" />
+                </div>
+              
+                <div class="photo-item">
+                    <img src="./assets/images/r-n-2.webp" alt="Reena and Me" />
+                </div>
+               
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-1.webp" alt="Me, Reena, and Anu" />
+                </div>
+             
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-6.webp" alt="Reena and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/reena-16.webp" alt="Me, Tamanna, and Anu" />
+                </div>
+             
+                <div class="photo-item">
+                    <img src="./assets/images/r-n-1.webp" alt="Me and Reena" />
+                </div>
+              
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-2.webp" alt="Me, Reena, and Anu" />
+                </div>
+              
+                <div class="photo-item">
+                    <img src="./assets/images/reena-15.webp" alt="Reena, Me, and Tamanna" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-4.webp" alt="Reena, Me, and Anu" />
+                </div>
+              
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-2.webp" alt="Me and Reena" />
+                </div>
+          
+                <div class="photo-item">
+                    <img src="./assets/images/reena-14.webp" alt="Reena, Me, and Tamanna" />
+                </div>
+            </div>
+
+            <div class="thank-you" id="thank-you-message" style="display: none;">
+                <p>Thank you for visiting this special gallery! Every photo tells a story of our beautiful bond. 🌟</p>
+                <p>I tried my best to make you smile with this little effort. 😊</p>
+            </div>
+
+            <a href="index.html">
+                <button class="btn">Back to starting</button>
+            </a>
+        </div>
+    </section>
+
+    <script>
+      
+       const lines = [
+            "Welcome to this beautiful journey of photos! 💖",
+            "Each photo tells a story of love, laughter, and memories. ✨",
+            "Happy Birthday to meri Priye Pdosn! 🎉🎂",
+            "Let's make this moment unforgettable! 🎉"
+        ];
+
+
+        let lineIndex = 0;
+        let charIndex = 0;
+        let speed = 100;
+
+        function typeLine() {
+            const line = lines[lineIndex];
+            if (charIndex < line.length) {
+                document.getElementById("welcome-message").innerHTML += line.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeLine, speed);
+            } else {
+                lineIndex++;
+                charIndex = 0;
+                if (lineIndex < lines.length) {
+                    document.getElementById("welcome-message").innerHTML += "<span class='typing'></span>"; 
+                    setTimeout(typeLine, 500); 
+                } else {
+                    setTimeout(showGallery, 1000); 
+                }
+            }
+        }
+
+        function showGallery() {
+            document.getElementById("gallery").style.display = "grid"; 
+            document.getElementById("thank-you-message").style.display = "block"; 
+        }
+
+  
+        window.onload = typeLine;
+    </script>
+
+</body>
+
+</html> -->
