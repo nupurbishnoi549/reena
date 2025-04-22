@@ -2,151 +2,303 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Reena 🎉</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reena Special Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to bottom right, #f0f8ff, #ffccff);
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        nav {
-            background-color: #ff3399;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            font-size: 1.8rem;
-            position: sticky;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f2f4ff;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            background-color: rebeccapurple;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 600;
+            position: fixed;
             top: 0;
-            z-index: 1000;
+            left: 0;
+            z-index: 10;
         }
 
         section {
-            padding: 4rem 1rem;
+            padding: 100px 20px 50px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .text-center {
             text-align: center;
-            display: none;
         }
 
-        .main-section {
-            display: block;
+        .bg-light {
+            background-color: #ffffff;
         }
 
-        section h2 {
-            color: #d9006c;
-            font-size: 2rem;
+        .bg-pink {
+            background-color: #ffe3f0;
+        }
+
+        .bg-purple {
+            background-color: #b39ddb;
+        }
+
+        .bg-yellow-light {
+            background-color: #fff9c4;
+        }
+
+        .bg-sky {
+            background-color: #b3e5fc;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .photo-gallery,
+        .cutie-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .photo-card {
+            width: 200px;
+            height: 250px;
+            /* Fixed height for uniformity */
+            object-fit: cover;
+            /* Ensures image fills the box nicely */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .message-cards,
+        .ira-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .message-card,
+        .cutie-card,
+        .ira-quote {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        .cutie-card {
+            background-color: #fff;
+            min-width: 150px;
+            text-align: center;
         }
 
         .btn {
-            background-color: #ff66cc;
+            padding: 10px 25px;
+            background-color: #1E71FF;
             color: white;
+            font-size: 16px;
             border: none;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            cursor: pointer;
             border-radius: 25px;
-            transition: all 0.3s;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
         .btn:hover {
-            background-color: #e60073;
+            background-color: #155cc2;
         }
 
-        img {
-            width: 300px;
-            max-width: 90%;
-            border-radius: 20px;
-            margin-top: 1.5rem;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+        /* Accordion */
+        .accordion-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-title {
+            padding: 15px 20px;
+            background-color: #1E71FF;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .accordion-content {
+            padding: 15px 20px;
+            display: none;
+            font-size: 16px;
+            color: #333;
+            background-color: #f8f9ff;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+        .accordion-item.active .accordion-title {
+            background-color: #1452b7;
+        }
+
+        @media(max-width: 600px) {
+            .photo-card {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 4 / 5;
+            }
+
         }
     </style>
 </head>
 
 <body>
-    <nav>🎂 Happy Birthday Reena 🎂</nav>
+    <div class="navbar">pdosn's birthday Special Page 💙</div>
 
-    <!-- Visible Main Sections -->
-    <section class="main-section" id="main">
-        <div>
-            <h2>1. Heartfelt Birthday Wishes</h2>
-            <p>Reena, you fill the world with endless joy, and your kindness shines brighter than the stars! 🌟</p>
-            <button class="btn" onclick="showSection('page1')">See More 🎁</button>
-        </div>
-        <div>
-            <h2>2. Cherished Memories</h2>
-            <p>Every memory with you is a treasure, full of laughter, love, and happiness! 💫</p>
-            <button class="btn" onclick="showSection('page2')">See More 📸</button>
-        </div>
-        <div>
-            <h2>3. The Magic You Bring</h2>
-            <p>Your smile, your laughter — it’s the magic that makes the world a better place! 🌈</p>
-            <button class="btn" onclick="showSection('page3')">See More 💌</button>
-        </div>
-        <div>
-            <h2>4. Our Fun Moments</h2>
-            <p>Every moment with you is filled with laughter and fun, making life so much brighter! 😂</p>
-            <button class="btn" onclick="showSection('page4')">See More 😜</button>
-        </div>
-        <div>
-            <h2>5. The Final Surprise</h2>
-            <p>A little surprise to remind you that you’re truly cherished and loved more than words can say! 💖</p>
-            <button class="btn" onclick="showSection('page5')">See More 🎉</button>
+    <section id="photos" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Memories with Reena 🎉</h2>
+            <p class="text-center">A beautiful collection of moments that make Reena's birthday even more special!</p>
+            <div class="photo-gallery">
+                <img src="./assets/images/reena-1.png" alt="Photo 1" class="photo-card">
+                <img src="./assets/images/reena-4.png" alt="Photo 2" class="photo-card">
+                <img src="./assets/images/reena-13.png" alt="Photo 3" class="photo-card">
+            </div>
         </div>
     </section>
 
-    <!-- Hidden Pages -->
-    <section id="page1">
-        <h2>🎂 Heartfelt Birthday Wishes 🎂</h2>
-        <p>Reena, on your special day, I want to wish you a lifetime filled with endless love, happiness, and success.
-            You are a wonderful person, and you deserve all the best in the world. May your birthday be as amazing as
-            you are! 💝</p>
-        <img src="./assets/images/reena-1.png" alt="Birthday Reena">
-        <br><button class="btn" onclick="goBack()">⬅ Back</button>
+    <section id="cute-messages" class="bg-pink">
+        <div class="container">
+            <h2 class="section-title text-center">Cute Messages 💌</h2>
+            <p class="text-center">Read some sweet and special birthday messages just for Reena! 🎂💖</p>
+            <div class="message-cards">
+                <div class="message-card">"Reena, your birthday is the perfect reminder of how wonderful you are.
+                    Wishing
+                    you all the happiness today and always!"</div>
+                <div class="message-card">"May your birthday be as amazing as you are, Reena! Shine brighter today and
+                    forever." </div>
+                <div class="message-card">"Happy Birthday, Reena! Your smile makes everything around you more beautiful,
+                    just like today!"</div>
+                <div class="message-card">"To the most caring, fun, and lovable person — Reena, may this year bring you
+                    endless joy and unforgettable moments!"</div>
+            </div>
+        </div>
     </section>
 
-    <section id="page2">
-        <h2>📸 Cherished Memories 📸</h2>
-        <p>From childhood moments to unforgettable experiences, every single memory with you holds a special place in my
-            heart. Here’s to many more moments of laughter and happiness together! 💞</p>
-        <img src="./assets/images/reena-4.png" alt="Memory Pic">
-        <br><button class="btn" onclick="goBack()">⬅ Back</button>
+    <section id="iras-era" class="bg-purple text-white">
+        <div class="container">
+            <h2 class="section-title text-center">Reena's Era 🌸</h2>
+            <p class="text-center">A special space for Reena's vibes — a mix of joy, memories & sparkles.</p>
+            <div class="ira-content">
+                <p>From laughter to sweet moments — this is the world Reena made unforgettable ✨</p>
+                <blockquote class="ira-quote">"In Reena’s world, every moment is brighter and every dream feels closer."
+                </blockquote>
+            </div>
+        </div>
     </section>
 
-    <section id="page3">
-        <h2>💖 The Magic You Bring 💖</h2>
-        <p>Your presence lights up every room, and your kind heart touches everyone you meet. You bring so much joy and
-            positivity into the world, and we are all so lucky to know you. 🌟</p>
-        <img src="./assets/images/reena-6.png" alt="Special Reena">
-        <br><button class="btn" onclick="goBack()">⬅ Back</button>
+
+    <section id="cutie-area" class="bg-yellow-light">
+        <div class="container">
+            <h2 class="section-title text-center">Cutie Area 🧸</h2>
+            <p class="text-center">Welcome to the Cutie Zone! Get ready for some extra sweetness and cuddles today! 💖
+            </p>
+            <div class="cutie-items">
+                <div class="cutie-card">🌈 Magical Rainbow Hug for you, Reena! Let’s spread love and positivity. 💕
+                </div>
+                <div class="cutie-card">🐻 Teddy Talk! Sending you all the warm cuddles and big bear hugs! 🧸💝</div>
+                <div class="cutie-card">🍭 Lollipop Laugh! Sweet and full of smiles — just like you, Reena! 😄🍬</div>
+            </div>
+        </div>
     </section>
 
-    <section id="page4">
-        <h2>😂 Our Fun Moments 😂</h2>
-        <p>From our inside jokes to spontaneous adventures, every moment spent with you is full of fun and laughter. I
-            treasure these memories forever! 💫</p>
-        <img src="./assets/images/reena-13.png" alt="Funny Pic">
-        <br><button class="btn" onclick="goBack()">⬅ Back</button>
+
+    <section id="reena-accordion" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Why We Love Reena 💙</h2>
+            <div class="accordion-container">
+                <div class="accordion-item active">
+                    <div class="accordion-title">🌟 Reena’s Magic</div>
+                    <div class="accordion-content">
+                        Reena has this magical aura that makes every day feel brighter. Her presence alone lights up any
+                        room she walks into! ✨💖
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">👑 Reena’s True Essence</div>
+                    <div class="accordion-content">
+                        Reena is pure elegance, a beautiful blend of grace and strength. She has this amazing ability to
+                        uplift everyone around her. 🌸💪
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-title">💙 How Reena Changes the Game</div>
+                    <div class="accordion-content">
+                        With her creativity and heart of gold, Reena has the power to turn any situation into something
+                        extraordinary. ✨🎨
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="page5">
-        <h2>🎊 The Final Surprise 🎊</h2>
-        <p>Reena, you are a true gem, and on your special day, I want to remind you how much you mean to all of us.
-            Here’s to an amazing year ahead and many more memories to cherish. You are loved, today and always! 💐</p>
-        <img src="./assets/images/reena-10.png" alt="Final Surprise">
-        <br><button class="btn" onclick="goBack()">⬅ Back</button>
-    </section>
 
+    <section id="reach-reena" class="bg-sky text-center">
+        <div class="container">
+            <h2 class="section-title">Send Your Love to Reena 💬</h2>
+            <p>Click the button below to brighten Reena's day with your special message and virtual hugs! 💖</p>
+            <button style="margin-top: 10px;" class="btn mt-3" onclick="showReenaPhoto()">Send Message 💌</button>
+            <div id="reena-photo" style="display:none; margin-top: 20px;">
+                <img src="./assets/images/reena-10.png" alt="Reena"
+                    style="max-width: 300px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="margin-top: 10px; font-size: 18px; font-weight: 500;">Here's a virtual hug from Reena's world!
+                    🌟💌</p>
+            </div>
+        </div>
+    </section>
     <script>
-        function showSection(id) {
-            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
-            document.getElementById(id).style.display = 'block';
-        }
+        const items = document.querySelectorAll('.accordion-item');
+        items.forEach(item => {
+            item.querySelector('.accordion-title').addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.toggle('active');
+            });
+        });
 
-        function goBack() {
-            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
-            document.getElementById('main').style.display = 'block';
+        function showReenaPhoto() {
+            const photo = document.getElementById('reena-photo');
+            photo.style.display = 'block';
         }
     </script>
 </body>
