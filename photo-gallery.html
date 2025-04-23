@@ -200,37 +200,74 @@
             </div>
 
             <div class="photo-gallery" id="gallery">
-
+            
+            
                 <div class="photo-item">
                     <img src="./assets/images/reena-4.webp" alt="Me and Reena" />
                 </div>
-
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-1.webp" alt="Reena and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-3.webp" alt="Reena, Me, and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-t-1.webp" alt="Me and Tamanna" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-3.webp" alt="Reena, Me, and Tamanna" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-n-2.webp" alt="Reena and Me" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-1.webp" alt="Me, Reena, and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-6.webp" alt="Reena and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/reena-16.webp" alt="Me, Tamanna, and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-n-1.webp" alt="Me and Reena" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-n-2.webp" alt="Me, Reena, and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/reena-15.webp" alt="Reena, Me, and Tamanna" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-4.webp" alt="Reena, Me, and Anu" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/r-a-2.webp" alt="Me and Reena" />
+                </div>
+            
+                <div class="photo-item">
+                    <img src="./assets/images/reena-14.webp" alt="Reena, Me, and Tamanna" />
+                </div>
                 <!-- other photo items ... -->
-
+            
             </div>
 
             <a href="index.html">
-                <button class="btn hidden-btn">Back to starting</button>
+                <button class="btn">Back to starting</button>
             </a>
-
-            <div class="thank-you" id="thank-you-message" style="display: none;">
-                <p>Thank you for visiting this special gallery! Every photo tells a story of our beautiful bond. 🌟</p>
-                <p>I tried my best to make you smile with this little effort. 😊</p>
-            </div>
-
-            <!-- This button will now appear after the typing effect -->
-            <button class="btn" id="thank-you-button" onclick="toggleThankYouCard()" style="display: none;">Click for
-                Special Thanks to Anu!</button>
-
-                
-                <div class="thank-you-card" id="thank-you-card">
-                    <p>Special thanks to Anu ji for her amazing help in creating this gallery and beautiful page! 🙏❤️</p>
-                    <p>50-50 credit goes to her! 👏💯</p>
-                    <p>A big thank you from the bottom of my heart! 💖</p>
-                    <p style="margin-top: 25px;" class="text-lg text-gray-800 font-semibold mt-4">—-by your ek loti pdosn 💖💌</p>
-        </div>
-
-
         </div>
     </section>
 
@@ -260,7 +297,6 @@
                     setTimeout(typeLine, 500);
                 } else {
                     setTimeout(showGallery, 1000);
-                    setTimeout(showThankYouButton, 4000); // Show the button after typing is done
                 }
             }
         }
@@ -268,10 +304,6 @@
         function showGallery() {
             document.getElementById("gallery").style.display = "grid";
             document.getElementById("thank-you-message").style.display = "block";
-        }
-
-        function showThankYouButton() {
-            document.getElementById("thank-you-button").style.display = "block"; // Display the button after typing effect
         }
 
         function toggleThankYouCard() {
